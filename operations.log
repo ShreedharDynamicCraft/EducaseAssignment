@@ -1,0 +1,240 @@
+{
+  "request": {
+    "timestamp": "2025-05-22T07:30:30.331Z",
+    "method": "GET",
+    "url": "/api/",
+    "params": {},
+    "query": {},
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.44.0",
+      "accept": "*/*",
+      "postman-token": "9bf67efa-5288-45ab-8fd9-2ea47b5bbfd6",
+      "host": "localhost:5000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "128"
+    }
+  },
+  "response": {
+    "timestamp": "2025-05-22T07:30:30.336Z",
+    "statusCode": 200,
+    "responseBody": "{\"message\":\"School Management API is running\",\"endpoints\":[{\"method\":\"POST\",\"path\":\"/api/addSchool\",\"description\":\"Add a new school\"},{\"method\":\"GET\",\"path\":\"/api/listSchools\",\"description\":\"List schools by proximity\"},{\"method\":\"GET\",\"path\":\"/api/test\",\"description\":\"Test if API routes are working\"},{\"method\":\"GET\",\"path\":\"/api/logs\",\"description\":\"View operation logs\"}]}",
+    "responseTime": 5
+  }
+},
+{
+  "request": {
+    "timestamp": "2025-05-22T07:30:36.707Z",
+    "method": "GET",
+    "url": "/api/logs",
+    "params": {},
+    "query": {},
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.44.0",
+      "accept": "*/*",
+      "postman-token": "8fe287e3-a4dd-4639-a2c4-c43cdca783b9",
+      "host": "localhost:5000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "128"
+    }
+  },
+  "response": {
+    "timestamp": "2025-05-22T07:30:36.709Z",
+    "statusCode": 200,
+    "responseBody": "{\"total\":1,\"logs\":[{\"request\":{\"timestamp\":\"2025-05-22T07:30:30.331Z\",\"method\":\"GET\",\"url\":\"/api/\",\"params\":{},\"query\":{},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"9bf67efa-5288-45ab-8fd9-2ea47b5bbfd6\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:30:30.336Z\",\"statusCode\":200,\"responseBody\":\"{\\\"message\\\":\\\"School Management API is running\\\",\\\"endpoints\\\":[{\\\"method\\\":\\\"POST\\\",\\\"path\\\":\\\"/api/addSchool\\\",\\\"description\\\":\\\"Add a new school\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/listSchools\\\",\\\"description\\\":\\\"List schools by proximity\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/test\\\",\\\"description\\\":\\\"Test if API routes are working\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/logs\\\",\\\"description\\\":\\\"View operation logs\\\"}]}\",\"responseTime\":5}}]}",
+    "responseTime": 2
+  }
+},
+{
+  "request": {
+    "timestamp": "2025-05-22T07:31:42.062Z",
+    "method": "GET",
+    "url": "/api/test",
+    "params": {},
+    "query": {},
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.44.0",
+      "accept": "*/*",
+      "postman-token": "cbe969f0-4533-4262-bbe8-39167086434a",
+      "host": "localhost:5000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "128"
+    }
+  },
+  "response": {
+    "timestamp": "2025-05-22T07:31:42.063Z",
+    "statusCode": 200,
+    "responseBody": "{\"message\":\"School routes are working\"}",
+    "responseTime": 1
+  }
+},
+{
+  "request": {
+    "timestamp": "2025-05-22T07:31:45.302Z",
+    "method": "GET",
+    "url": "/api/",
+    "params": {},
+    "query": {},
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.44.0",
+      "accept": "*/*",
+      "postman-token": "445603a0-e2c7-4ded-b13e-3b600a373ccd",
+      "host": "localhost:5000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "128"
+    }
+  },
+  "response": {
+    "timestamp": "2025-05-22T07:31:45.302Z",
+    "statusCode": 200,
+    "responseBody": "{\"message\":\"School Management API is running\",\"endpoints\":[{\"method\":\"POST\",\"path\":\"/api/addSchool\",\"description\":\"Add a new school\"},{\"method\":\"GET\",\"path\":\"/api/listSchools\",\"description\":\"List schools by proximity\"},{\"method\":\"GET\",\"path\":\"/api/test\",\"description\":\"Test if API routes are working\"},{\"method\":\"GET\",\"path\":\"/api/logs\",\"description\":\"View operation logs\"}]}",
+    "responseTime": 0
+  }
+},
+{
+  "request": {
+    "timestamp": "2025-05-22T07:32:05.682Z",
+    "method": "POST",
+    "url": "/api/addSchool",
+    "params": {},
+    "query": {},
+    "body": {
+      "name": "Central High School",
+      "address": "123 Education Street, City",
+      "latitude": 34.0522,
+      "longitude": -118.2437
+    },
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.44.0",
+      "accept": "*/*",
+      "postman-token": "55b27c9f-681b-496d-8645-d35ab772d601",
+      "host": "localhost:5000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "128"
+    }
+  },
+  "response": {
+    "timestamp": "2025-05-22T07:32:05.709Z",
+    "statusCode": 201,
+    "responseBody": "{\"success\":true,\"message\":\"School added successfully\",\"data\":{\"id\":12,\"name\":\"Central High School\",\"address\":\"123 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437}}",
+    "responseTime": 27
+  }
+},
+{
+  "request": {
+    "timestamp": "2025-05-22T07:32:15.996Z",
+    "method": "POST",
+    "url": "/api/addSchool",
+    "params": {},
+    "query": {},
+    "body": {
+      "name": "IIIIIIIIIIT High School",
+      "address": "123 Education Street, City",
+      "latitude": 34.0522,
+      "longitude": -118.2437
+    },
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.44.0",
+      "accept": "*/*",
+      "postman-token": "e8a95934-48fc-49c0-a946-3e78760b7c72",
+      "host": "localhost:5000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "132"
+    }
+  },
+  "response": {
+    "timestamp": "2025-05-22T07:32:16.000Z",
+    "statusCode": 201,
+    "responseBody": "{\"success\":true,\"message\":\"School added successfully\",\"data\":{\"id\":13,\"name\":\"IIIIIIIIIIT High School\",\"address\":\"123 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437}}",
+    "responseTime": 4
+  }
+},
+{
+  "request": {
+    "timestamp": "2025-05-22T07:32:21.927Z",
+    "method": "GET",
+    "url": "/api/listSchools?latitude=34.0522&longitude=-118.2437",
+    "params": {},
+    "query": {
+      "latitude": "34.0522",
+      "longitude": "-118.2437"
+    },
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.44.0",
+      "accept": "*/*",
+      "postman-token": "969b7e06-6978-491d-928a-50813b5b604e",
+      "host": "localhost:5000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "132"
+    }
+  },
+  "response": {
+    "timestamp": "2025-05-22T07:32:21.931Z",
+    "statusCode": 200,
+    "responseBody": "{\"success\":true,\"message\":\"Schools retrieved successfully\",\"data\":[{\"id\":1,\"name\":\"Test School\",\"address\":\"123 Test Street\",\"latitude\":34.0522,\"longitude\":-118.2437,\"created_at\":\"2025-05-22 06:57:59\",\"distance\":0},{\"id\":2,\"name\":\"Central High School\",\"address\":\"123 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437,\"created_at\":\"2025-05-22 07:07:55\",\"distance\":0},{\"id\":10,\"name\":\"Central High School\",\"address\":\"123 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437,\"created_at\":\"2025-05-22 07:28:41\",\"distance\":0},{\"id\":11,\"name\":\"IIIIT High School\",\"address\":\"12eee3 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437,\"created_at\":\"2025-05-22 07:28:53\",\"distance\":0},{\"id\":12,\"name\":\"Central High School\",\"address\":\"123 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437,\"created_at\":\"2025-05-22 07:32:05\",\"distance\":0},{\"id\":13,\"name\":\"IIIIIIIIIIT High School\",\"address\":\"123 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437,\"created_at\":\"2025-05-22 07:32:15\",\"distance\":0},{\"id\":3,\"name\":\"Lincoln Elementary\",\"address\":\"456 Learning Avenue, City\",\"latitude\":34.055,\"longitude\":-118.25,\"created_at\":\"2025-05-22 07:09:04\",\"distance\":0.6586328906697838},{\"id\":4,\"name\":\"Lincoln Elementary\",\"address\":\"456 Learning Avenue, City\",\"latitude\":34.055,\"longitude\":-118.25,\"created_at\":\"2025-05-22 07:25:21\",\"distance\":0.6586328906697838},{\"id\":5,\"name\":\"Lincoln Elementary\",\"address\":\"456 Learning Avenue, City\",\"latitude\":34.055,\"longitude\":-118.25,\"created_at\":\"2025-05-22 07:25:33\",\"distance\":0.6586328906697838},{\"id\":6,\"name\":\"Lincoln Elementary\",\"address\":\"456 Learning Avenue, City\",\"latitude\":34.055,\"longitude\":-118.25,\"created_at\":\"2025-05-22 07:25:40\",\"distance\":0.6586328906697838},{\"id\":7,\"name\":\"Lincoln Elementary\",\"address\":\"456 Learning Avenue, City\",\"latitude\":34.055,\"longitude\":-118.25,\"created_at\":\"2025-05-22 07:26:36\",\"distance\":0.6586328906697838},{\"id\":8,\"name\":\"Lincoln Elementary\",\"address\":\"456 Learning Avenue, City\",\"latitude\":34.055,\"longitude\":-118.25,\"created_at\":\"2025-05-22 07:27:15\",\"distance\":0.6586328906697838},{\"id\":9,\"name\":\"dddd Elementary\",\"address\":\"555 Learning Avenue, City\",\"latitude\":34.055,\"longitude\":-118.25,\"created_at\":\"2025-05-22 07:27:25\",\"distance\":0.6586328906697838}]}",
+    "responseTime": 4
+  }
+},
+{
+  "request": {
+    "timestamp": "2025-05-22T07:32:34.388Z",
+    "method": "GET",
+    "url": "/api/logs",
+    "params": {},
+    "query": {},
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.44.0",
+      "accept": "*/*",
+      "postman-token": "73a8c9ba-30f0-4c4d-b40d-bb9d43b58e1c",
+      "host": "localhost:5000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "132"
+    }
+  },
+  "response": {
+    "timestamp": "2025-05-22T07:32:34.389Z",
+    "statusCode": 200,
+    "responseBody": "{\"total\":7,\"logs\":[{\"request\":{\"timestamp\":\"2025-05-22T07:30:30.331Z\",\"method\":\"GET\",\"url\":\"/api/\",\"params\":{},\"query\":{},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"9bf67efa-5288-45ab-8fd9-2ea47b5bbfd6\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:30:30.336Z\",\"statusCode\":200,\"responseBody\":\"{\\\"message\\\":\\\"School Management API is running\\\",\\\"endpoints\\\":[{\\\"method\\\":\\\"POST\\\",\\\"path\\\":\\\"/api/addSchool\\\",\\\"description\\\":\\\"Add a new school\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/listSchools\\\",\\\"description\\\":\\\"List schools by proximity\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/test\\\",\\\"description\\\":\\\"Test if API routes are working\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/logs\\\",\\\"description\\\":\\\"View operation logs\\\"}]}\",\"responseTime\":5}},{\"request\":{\"timestamp\":\"2025-05-22T07:30:36.707Z\",\"method\":\"GET\",\"url\":\"/api/logs\",\"params\":{},\"query\":{},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"8fe287e3-a4dd-4639-a2c4-c43cdca783b9\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:30:36.709Z\",\"statusCode\":200,\"responseBody\":\"{\\\"total\\\":1,\\\"logs\\\":[{\\\"request\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:30:30.331Z\\\",\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"/api/\\\",\\\"params\\\":{},\\\"query\\\":{},\\\"headers\\\":{\\\"content-type\\\":\\\"application/json\\\",\\\"user-agent\\\":\\\"PostmanRuntime/7.44.0\\\",\\\"accept\\\":\\\"*/*\\\",\\\"postman-token\\\":\\\"9bf67efa-5288-45ab-8fd9-2ea47b5bbfd6\\\",\\\"host\\\":\\\"localhost:5000\\\",\\\"accept-encoding\\\":\\\"gzip, deflate, br\\\",\\\"connection\\\":\\\"keep-alive\\\",\\\"content-length\\\":\\\"128\\\"}},\\\"response\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:30:30.336Z\\\",\\\"statusCode\\\":200,\\\"responseBody\\\":\\\"{\\\\\\\"message\\\\\\\":\\\\\\\"School Management API is running\\\\\\\",\\\\\\\"endpoints\\\\\\\":[{\\\\\\\"method\\\\\\\":\\\\\\\"POST\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/addSchool\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Add a new school\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/listSchools\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"List schools by proximity\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/test\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Test if API routes are working\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/logs\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"View operation logs\\\\\\\"}]}\\\",\\\"responseTime\\\":5}}]}\",\"responseTime\":2}},{\"request\":{\"timestamp\":\"2025-05-22T07:31:42.062Z\",\"method\":\"GET\",\"url\":\"/api/test\",\"params\":{},\"query\":{},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"cbe969f0-4533-4262-bbe8-39167086434a\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:31:42.063Z\",\"statusCode\":200,\"responseBody\":\"{\\\"message\\\":\\\"School routes are working\\\"}\",\"responseTime\":1}},{\"request\":{\"timestamp\":\"2025-05-22T07:31:45.302Z\",\"method\":\"GET\",\"url\":\"/api/\",\"params\":{},\"query\":{},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"445603a0-e2c7-4ded-b13e-3b600a373ccd\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:31:45.302Z\",\"statusCode\":200,\"responseBody\":\"{\\\"message\\\":\\\"School Management API is running\\\",\\\"endpoints\\\":[{\\\"method\\\":\\\"POST\\\",\\\"path\\\":\\\"/api/addSchool\\\",\\\"description\\\":\\\"Add a new school\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/listSchools\\\",\\\"description\\\":\\\"List schools by proximity\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/test\\\",\\\"description\\\":\\\"Test if API routes are working\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/logs\\\",\\\"description\\\":\\\"View operation logs\\\"}]}\",\"responseTime\":0}},{\"request\":{\"timestamp\":\"2025-05-22T07:32:05.682Z\",\"method\":\"POST\",\"url\":\"/api/addSchool\",\"params\":{},\"query\":{},\"body\":{\"name\":\"Central High School\",\"address\":\"123 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"55b27c9f-681b-496d-8645-d35ab772d601\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:32:05.709Z\",\"statusCode\":201,\"responseBody\":\"{\\\"success\\\":true,\\\"message\\\":\\\"School added successfully\\\",\\\"data\\\":{\\\"id\\\":12,\\\"name\\\":\\\"Central High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437}}\",\"responseTime\":27}},{\"request\":{\"timestamp\":\"2025-05-22T07:32:15.996Z\",\"method\":\"POST\",\"url\":\"/api/addSchool\",\"params\":{},\"query\":{},\"body\":{\"name\":\"IIIIIIIIIIT High School\",\"address\":\"123 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"e8a95934-48fc-49c0-a946-3e78760b7c72\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"132\"}},\"response\":{\"timestamp\":\"2025-05-22T07:32:16.000Z\",\"statusCode\":201,\"responseBody\":\"{\\\"success\\\":true,\\\"message\\\":\\\"School added successfully\\\",\\\"data\\\":{\\\"id\\\":13,\\\"name\\\":\\\"IIIIIIIIIIT High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437}}\",\"responseTime\":4}},{\"request\":{\"timestamp\":\"2025-05-22T07:32:21.927Z\",\"method\":\"GET\",\"url\":\"/api/listSchools?latitude=34.0522&longitude=-118.2437\",\"params\":{},\"query\":{\"latitude\":\"34.0522\",\"longitude\":\"-118.2437\"},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"969b7e06-6978-491d-928a-50813b5b604e\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"132\"}},\"response\":{\"timestamp\":\"2025-05-22T07:32:21.931Z\",\"statusCode\":200,\"responseBody\":\"{\\\"success\\\":true,\\\"message\\\":\\\"Schools retrieved successfully\\\",\\\"data\\\":[{\\\"id\\\":1,\\\"name\\\":\\\"Test School\\\",\\\"address\\\":\\\"123 Test Street\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 06:57:59\\\",\\\"distance\\\":0},{\\\"id\\\":2,\\\"name\\\":\\\"Central High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 07:07:55\\\",\\\"distance\\\":0},{\\\"id\\\":10,\\\"name\\\":\\\"Central High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 07:28:41\\\",\\\"distance\\\":0},{\\\"id\\\":11,\\\"name\\\":\\\"IIIIT High School\\\",\\\"address\\\":\\\"12eee3 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 07:28:53\\\",\\\"distance\\\":0},{\\\"id\\\":12,\\\"name\\\":\\\"Central High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 07:32:05\\\",\\\"distance\\\":0},{\\\"id\\\":13,\\\"name\\\":\\\"IIIIIIIIIIT High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 07:32:15\\\",\\\"distance\\\":0},{\\\"id\\\":3,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:09:04\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":4,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:25:21\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":5,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:25:33\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":6,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:25:40\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":7,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:26:36\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":8,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:27:15\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":9,\\\"name\\\":\\\"dddd Elementary\\\",\\\"address\\\":\\\"555 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:27:25\\\",\\\"distance\\\":0.6586328906697838}]}\",\"responseTime\":4}}]}",
+    "responseTime": 1
+  }
+},
+{
+  "request": {
+    "timestamp": "2025-05-22T07:32:45.204Z",
+    "method": "GET",
+    "url": "/api/logs",
+    "params": {},
+    "query": {},
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "PostmanRuntime/7.44.0",
+      "accept": "*/*",
+      "postman-token": "15fbcb63-5c5f-4092-aac8-fb2d165ea25d",
+      "host": "localhost:5000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "content-length": "132"
+    }
+  },
+  "response": {
+    "timestamp": "2025-05-22T07:32:45.206Z",
+    "statusCode": 200,
+    "responseBody": "{\"total\":8,\"logs\":[{\"request\":{\"timestamp\":\"2025-05-22T07:30:30.331Z\",\"method\":\"GET\",\"url\":\"/api/\",\"params\":{},\"query\":{},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"9bf67efa-5288-45ab-8fd9-2ea47b5bbfd6\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:30:30.336Z\",\"statusCode\":200,\"responseBody\":\"{\\\"message\\\":\\\"School Management API is running\\\",\\\"endpoints\\\":[{\\\"method\\\":\\\"POST\\\",\\\"path\\\":\\\"/api/addSchool\\\",\\\"description\\\":\\\"Add a new school\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/listSchools\\\",\\\"description\\\":\\\"List schools by proximity\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/test\\\",\\\"description\\\":\\\"Test if API routes are working\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/logs\\\",\\\"description\\\":\\\"View operation logs\\\"}]}\",\"responseTime\":5}},{\"request\":{\"timestamp\":\"2025-05-22T07:30:36.707Z\",\"method\":\"GET\",\"url\":\"/api/logs\",\"params\":{},\"query\":{},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"8fe287e3-a4dd-4639-a2c4-c43cdca783b9\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:30:36.709Z\",\"statusCode\":200,\"responseBody\":\"{\\\"total\\\":1,\\\"logs\\\":[{\\\"request\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:30:30.331Z\\\",\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"/api/\\\",\\\"params\\\":{},\\\"query\\\":{},\\\"headers\\\":{\\\"content-type\\\":\\\"application/json\\\",\\\"user-agent\\\":\\\"PostmanRuntime/7.44.0\\\",\\\"accept\\\":\\\"*/*\\\",\\\"postman-token\\\":\\\"9bf67efa-5288-45ab-8fd9-2ea47b5bbfd6\\\",\\\"host\\\":\\\"localhost:5000\\\",\\\"accept-encoding\\\":\\\"gzip, deflate, br\\\",\\\"connection\\\":\\\"keep-alive\\\",\\\"content-length\\\":\\\"128\\\"}},\\\"response\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:30:30.336Z\\\",\\\"statusCode\\\":200,\\\"responseBody\\\":\\\"{\\\\\\\"message\\\\\\\":\\\\\\\"School Management API is running\\\\\\\",\\\\\\\"endpoints\\\\\\\":[{\\\\\\\"method\\\\\\\":\\\\\\\"POST\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/addSchool\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Add a new school\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/listSchools\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"List schools by proximity\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/test\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Test if API routes are working\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/logs\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"View operation logs\\\\\\\"}]}\\\",\\\"responseTime\\\":5}}]}\",\"responseTime\":2}},{\"request\":{\"timestamp\":\"2025-05-22T07:31:42.062Z\",\"method\":\"GET\",\"url\":\"/api/test\",\"params\":{},\"query\":{},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"cbe969f0-4533-4262-bbe8-39167086434a\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:31:42.063Z\",\"statusCode\":200,\"responseBody\":\"{\\\"message\\\":\\\"School routes are working\\\"}\",\"responseTime\":1}},{\"request\":{\"timestamp\":\"2025-05-22T07:31:45.302Z\",\"method\":\"GET\",\"url\":\"/api/\",\"params\":{},\"query\":{},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"445603a0-e2c7-4ded-b13e-3b600a373ccd\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:31:45.302Z\",\"statusCode\":200,\"responseBody\":\"{\\\"message\\\":\\\"School Management API is running\\\",\\\"endpoints\\\":[{\\\"method\\\":\\\"POST\\\",\\\"path\\\":\\\"/api/addSchool\\\",\\\"description\\\":\\\"Add a new school\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/listSchools\\\",\\\"description\\\":\\\"List schools by proximity\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/test\\\",\\\"description\\\":\\\"Test if API routes are working\\\"},{\\\"method\\\":\\\"GET\\\",\\\"path\\\":\\\"/api/logs\\\",\\\"description\\\":\\\"View operation logs\\\"}]}\",\"responseTime\":0}},{\"request\":{\"timestamp\":\"2025-05-22T07:32:05.682Z\",\"method\":\"POST\",\"url\":\"/api/addSchool\",\"params\":{},\"query\":{},\"body\":{\"name\":\"Central High School\",\"address\":\"123 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"55b27c9f-681b-496d-8645-d35ab772d601\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"128\"}},\"response\":{\"timestamp\":\"2025-05-22T07:32:05.709Z\",\"statusCode\":201,\"responseBody\":\"{\\\"success\\\":true,\\\"message\\\":\\\"School added successfully\\\",\\\"data\\\":{\\\"id\\\":12,\\\"name\\\":\\\"Central High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437}}\",\"responseTime\":27}},{\"request\":{\"timestamp\":\"2025-05-22T07:32:15.996Z\",\"method\":\"POST\",\"url\":\"/api/addSchool\",\"params\":{},\"query\":{},\"body\":{\"name\":\"IIIIIIIIIIT High School\",\"address\":\"123 Education Street, City\",\"latitude\":34.0522,\"longitude\":-118.2437},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"e8a95934-48fc-49c0-a946-3e78760b7c72\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"132\"}},\"response\":{\"timestamp\":\"2025-05-22T07:32:16.000Z\",\"statusCode\":201,\"responseBody\":\"{\\\"success\\\":true,\\\"message\\\":\\\"School added successfully\\\",\\\"data\\\":{\\\"id\\\":13,\\\"name\\\":\\\"IIIIIIIIIIT High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437}}\",\"responseTime\":4}},{\"request\":{\"timestamp\":\"2025-05-22T07:32:21.927Z\",\"method\":\"GET\",\"url\":\"/api/listSchools?latitude=34.0522&longitude=-118.2437\",\"params\":{},\"query\":{\"latitude\":\"34.0522\",\"longitude\":\"-118.2437\"},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"969b7e06-6978-491d-928a-50813b5b604e\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"132\"}},\"response\":{\"timestamp\":\"2025-05-22T07:32:21.931Z\",\"statusCode\":200,\"responseBody\":\"{\\\"success\\\":true,\\\"message\\\":\\\"Schools retrieved successfully\\\",\\\"data\\\":[{\\\"id\\\":1,\\\"name\\\":\\\"Test School\\\",\\\"address\\\":\\\"123 Test Street\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 06:57:59\\\",\\\"distance\\\":0},{\\\"id\\\":2,\\\"name\\\":\\\"Central High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 07:07:55\\\",\\\"distance\\\":0},{\\\"id\\\":10,\\\"name\\\":\\\"Central High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 07:28:41\\\",\\\"distance\\\":0},{\\\"id\\\":11,\\\"name\\\":\\\"IIIIT High School\\\",\\\"address\\\":\\\"12eee3 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 07:28:53\\\",\\\"distance\\\":0},{\\\"id\\\":12,\\\"name\\\":\\\"Central High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 07:32:05\\\",\\\"distance\\\":0},{\\\"id\\\":13,\\\"name\\\":\\\"IIIIIIIIIIT High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437,\\\"created_at\\\":\\\"2025-05-22 07:32:15\\\",\\\"distance\\\":0},{\\\"id\\\":3,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:09:04\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":4,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:25:21\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":5,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:25:33\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":6,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:25:40\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":7,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:26:36\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":8,\\\"name\\\":\\\"Lincoln Elementary\\\",\\\"address\\\":\\\"456 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:27:15\\\",\\\"distance\\\":0.6586328906697838},{\\\"id\\\":9,\\\"name\\\":\\\"dddd Elementary\\\",\\\"address\\\":\\\"555 Learning Avenue, City\\\",\\\"latitude\\\":34.055,\\\"longitude\\\":-118.25,\\\"created_at\\\":\\\"2025-05-22 07:27:25\\\",\\\"distance\\\":0.6586328906697838}]}\",\"responseTime\":4}},{\"request\":{\"timestamp\":\"2025-05-22T07:32:34.388Z\",\"method\":\"GET\",\"url\":\"/api/logs\",\"params\":{},\"query\":{},\"headers\":{\"content-type\":\"application/json\",\"user-agent\":\"PostmanRuntime/7.44.0\",\"accept\":\"*/*\",\"postman-token\":\"73a8c9ba-30f0-4c4d-b40d-bb9d43b58e1c\",\"host\":\"localhost:5000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\",\"content-length\":\"132\"}},\"response\":{\"timestamp\":\"2025-05-22T07:32:34.389Z\",\"statusCode\":200,\"responseBody\":\"{\\\"total\\\":7,\\\"logs\\\":[{\\\"request\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:30:30.331Z\\\",\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"/api/\\\",\\\"params\\\":{},\\\"query\\\":{},\\\"headers\\\":{\\\"content-type\\\":\\\"application/json\\\",\\\"user-agent\\\":\\\"PostmanRuntime/7.44.0\\\",\\\"accept\\\":\\\"*/*\\\",\\\"postman-token\\\":\\\"9bf67efa-5288-45ab-8fd9-2ea47b5bbfd6\\\",\\\"host\\\":\\\"localhost:5000\\\",\\\"accept-encoding\\\":\\\"gzip, deflate, br\\\",\\\"connection\\\":\\\"keep-alive\\\",\\\"content-length\\\":\\\"128\\\"}},\\\"response\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:30:30.336Z\\\",\\\"statusCode\\\":200,\\\"responseBody\\\":\\\"{\\\\\\\"message\\\\\\\":\\\\\\\"School Management API is running\\\\\\\",\\\\\\\"endpoints\\\\\\\":[{\\\\\\\"method\\\\\\\":\\\\\\\"POST\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/addSchool\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Add a new school\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/listSchools\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"List schools by proximity\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/test\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Test if API routes are working\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/logs\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"View operation logs\\\\\\\"}]}\\\",\\\"responseTime\\\":5}},{\\\"request\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:30:36.707Z\\\",\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"/api/logs\\\",\\\"params\\\":{},\\\"query\\\":{},\\\"headers\\\":{\\\"content-type\\\":\\\"application/json\\\",\\\"user-agent\\\":\\\"PostmanRuntime/7.44.0\\\",\\\"accept\\\":\\\"*/*\\\",\\\"postman-token\\\":\\\"8fe287e3-a4dd-4639-a2c4-c43cdca783b9\\\",\\\"host\\\":\\\"localhost:5000\\\",\\\"accept-encoding\\\":\\\"gzip, deflate, br\\\",\\\"connection\\\":\\\"keep-alive\\\",\\\"content-length\\\":\\\"128\\\"}},\\\"response\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:30:36.709Z\\\",\\\"statusCode\\\":200,\\\"responseBody\\\":\\\"{\\\\\\\"total\\\\\\\":1,\\\\\\\"logs\\\\\\\":[{\\\\\\\"request\\\\\\\":{\\\\\\\"timestamp\\\\\\\":\\\\\\\"2025-05-22T07:30:30.331Z\\\\\\\",\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"/api/\\\\\\\",\\\\\\\"params\\\\\\\":{},\\\\\\\"query\\\\\\\":{},\\\\\\\"headers\\\\\\\":{\\\\\\\"content-type\\\\\\\":\\\\\\\"application/json\\\\\\\",\\\\\\\"user-agent\\\\\\\":\\\\\\\"PostmanRuntime/7.44.0\\\\\\\",\\\\\\\"accept\\\\\\\":\\\\\\\"*/*\\\\\\\",\\\\\\\"postman-token\\\\\\\":\\\\\\\"9bf67efa-5288-45ab-8fd9-2ea47b5bbfd6\\\\\\\",\\\\\\\"host\\\\\\\":\\\\\\\"localhost:5000\\\\\\\",\\\\\\\"accept-encoding\\\\\\\":\\\\\\\"gzip, deflate, br\\\\\\\",\\\\\\\"connection\\\\\\\":\\\\\\\"keep-alive\\\\\\\",\\\\\\\"content-length\\\\\\\":\\\\\\\"128\\\\\\\"}},\\\\\\\"response\\\\\\\":{\\\\\\\"timestamp\\\\\\\":\\\\\\\"2025-05-22T07:30:30.336Z\\\\\\\",\\\\\\\"statusCode\\\\\\\":200,\\\\\\\"responseBody\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"message\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"School Management API is running\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"endpoints\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"method\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"POST\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"path\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"/api/addSchool\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"description\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Add a new school\\\\\\\\\\\\\\\"},{\\\\\\\\\\\\\\\"method\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"GET\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"path\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"/api/listSchools\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"description\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"List schools by proximity\\\\\\\\\\\\\\\"},{\\\\\\\\\\\\\\\"method\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"GET\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"path\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"/api/test\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"description\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Test if API routes are working\\\\\\\\\\\\\\\"},{\\\\\\\\\\\\\\\"method\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"GET\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"path\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"/api/logs\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"description\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"View operation logs\\\\\\\\\\\\\\\"}]}\\\\\\\",\\\\\\\"responseTime\\\\\\\":5}}]}\\\",\\\"responseTime\\\":2}},{\\\"request\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:31:42.062Z\\\",\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"/api/test\\\",\\\"params\\\":{},\\\"query\\\":{},\\\"headers\\\":{\\\"content-type\\\":\\\"application/json\\\",\\\"user-agent\\\":\\\"PostmanRuntime/7.44.0\\\",\\\"accept\\\":\\\"*/*\\\",\\\"postman-token\\\":\\\"cbe969f0-4533-4262-bbe8-39167086434a\\\",\\\"host\\\":\\\"localhost:5000\\\",\\\"accept-encoding\\\":\\\"gzip, deflate, br\\\",\\\"connection\\\":\\\"keep-alive\\\",\\\"content-length\\\":\\\"128\\\"}},\\\"response\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:31:42.063Z\\\",\\\"statusCode\\\":200,\\\"responseBody\\\":\\\"{\\\\\\\"message\\\\\\\":\\\\\\\"School routes are working\\\\\\\"}\\\",\\\"responseTime\\\":1}},{\\\"request\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:31:45.302Z\\\",\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"/api/\\\",\\\"params\\\":{},\\\"query\\\":{},\\\"headers\\\":{\\\"content-type\\\":\\\"application/json\\\",\\\"user-agent\\\":\\\"PostmanRuntime/7.44.0\\\",\\\"accept\\\":\\\"*/*\\\",\\\"postman-token\\\":\\\"445603a0-e2c7-4ded-b13e-3b600a373ccd\\\",\\\"host\\\":\\\"localhost:5000\\\",\\\"accept-encoding\\\":\\\"gzip, deflate, br\\\",\\\"connection\\\":\\\"keep-alive\\\",\\\"content-length\\\":\\\"128\\\"}},\\\"response\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:31:45.302Z\\\",\\\"statusCode\\\":200,\\\"responseBody\\\":\\\"{\\\\\\\"message\\\\\\\":\\\\\\\"School Management API is running\\\\\\\",\\\\\\\"endpoints\\\\\\\":[{\\\\\\\"method\\\\\\\":\\\\\\\"POST\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/addSchool\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Add a new school\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/listSchools\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"List schools by proximity\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/test\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Test if API routes are working\\\\\\\"},{\\\\\\\"method\\\\\\\":\\\\\\\"GET\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/api/logs\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"View operation logs\\\\\\\"}]}\\\",\\\"responseTime\\\":0}},{\\\"request\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:32:05.682Z\\\",\\\"method\\\":\\\"POST\\\",\\\"url\\\":\\\"/api/addSchool\\\",\\\"params\\\":{},\\\"query\\\":{},\\\"body\\\":{\\\"name\\\":\\\"Central High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437},\\\"headers\\\":{\\\"content-type\\\":\\\"application/json\\\",\\\"user-agent\\\":\\\"PostmanRuntime/7.44.0\\\",\\\"accept\\\":\\\"*/*\\\",\\\"postman-token\\\":\\\"55b27c9f-681b-496d-8645-d35ab772d601\\\",\\\"host\\\":\\\"localhost:5000\\\",\\\"accept-encoding\\\":\\\"gzip, deflate, br\\\",\\\"connection\\\":\\\"keep-alive\\\",\\\"content-length\\\":\\\"128\\\"}},\\\"response\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:32:05.709Z\\\",\\\"statusCode\\\":201,\\\"responseBody\\\":\\\"{\\\\\\\"success\\\\\\\":true,\\\\\\\"message\\\\\\\":\\\\\\\"School added successfully\\\\\\\",\\\\\\\"data\\\\\\\":{\\\\\\\"id\\\\\\\":12,\\\\\\\"name\\\\\\\":\\\\\\\"Central High School\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"123 Education Street, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.0522,\\\\\\\"longitude\\\\\\\":-118.2437}}\\\",\\\"responseTime\\\":27}},{\\\"request\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:32:15.996Z\\\",\\\"method\\\":\\\"POST\\\",\\\"url\\\":\\\"/api/addSchool\\\",\\\"params\\\":{},\\\"query\\\":{},\\\"body\\\":{\\\"name\\\":\\\"IIIIIIIIIIT High School\\\",\\\"address\\\":\\\"123 Education Street, City\\\",\\\"latitude\\\":34.0522,\\\"longitude\\\":-118.2437},\\\"headers\\\":{\\\"content-type\\\":\\\"application/json\\\",\\\"user-agent\\\":\\\"PostmanRuntime/7.44.0\\\",\\\"accept\\\":\\\"*/*\\\",\\\"postman-token\\\":\\\"e8a95934-48fc-49c0-a946-3e78760b7c72\\\",\\\"host\\\":\\\"localhost:5000\\\",\\\"accept-encoding\\\":\\\"gzip, deflate, br\\\",\\\"connection\\\":\\\"keep-alive\\\",\\\"content-length\\\":\\\"132\\\"}},\\\"response\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:32:16.000Z\\\",\\\"statusCode\\\":201,\\\"responseBody\\\":\\\"{\\\\\\\"success\\\\\\\":true,\\\\\\\"message\\\\\\\":\\\\\\\"School added successfully\\\\\\\",\\\\\\\"data\\\\\\\":{\\\\\\\"id\\\\\\\":13,\\\\\\\"name\\\\\\\":\\\\\\\"IIIIIIIIIIT High School\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"123 Education Street, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.0522,\\\\\\\"longitude\\\\\\\":-118.2437}}\\\",\\\"responseTime\\\":4}},{\\\"request\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:32:21.927Z\\\",\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"/api/listSchools?latitude=34.0522&longitude=-118.2437\\\",\\\"params\\\":{},\\\"query\\\":{\\\"latitude\\\":\\\"34.0522\\\",\\\"longitude\\\":\\\"-118.2437\\\"},\\\"headers\\\":{\\\"content-type\\\":\\\"application/json\\\",\\\"user-agent\\\":\\\"PostmanRuntime/7.44.0\\\",\\\"accept\\\":\\\"*/*\\\",\\\"postman-token\\\":\\\"969b7e06-6978-491d-928a-50813b5b604e\\\",\\\"host\\\":\\\"localhost:5000\\\",\\\"accept-encoding\\\":\\\"gzip, deflate, br\\\",\\\"connection\\\":\\\"keep-alive\\\",\\\"content-length\\\":\\\"132\\\"}},\\\"response\\\":{\\\"timestamp\\\":\\\"2025-05-22T07:32:21.931Z\\\",\\\"statusCode\\\":200,\\\"responseBody\\\":\\\"{\\\\\\\"success\\\\\\\":true,\\\\\\\"message\\\\\\\":\\\\\\\"Schools retrieved successfully\\\\\\\",\\\\\\\"data\\\\\\\":[{\\\\\\\"id\\\\\\\":1,\\\\\\\"name\\\\\\\":\\\\\\\"Test School\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"123 Test Street\\\\\\\",\\\\\\\"latitude\\\\\\\":34.0522,\\\\\\\"longitude\\\\\\\":-118.2437,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 06:57:59\\\\\\\",\\\\\\\"distance\\\\\\\":0},{\\\\\\\"id\\\\\\\":2,\\\\\\\"name\\\\\\\":\\\\\\\"Central High School\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"123 Education Street, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.0522,\\\\\\\"longitude\\\\\\\":-118.2437,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:07:55\\\\\\\",\\\\\\\"distance\\\\\\\":0},{\\\\\\\"id\\\\\\\":10,\\\\\\\"name\\\\\\\":\\\\\\\"Central High School\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"123 Education Street, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.0522,\\\\\\\"longitude\\\\\\\":-118.2437,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:28:41\\\\\\\",\\\\\\\"distance\\\\\\\":0},{\\\\\\\"id\\\\\\\":11,\\\\\\\"name\\\\\\\":\\\\\\\"IIIIT High School\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"12eee3 Education Street, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.0522,\\\\\\\"longitude\\\\\\\":-118.2437,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:28:53\\\\\\\",\\\\\\\"distance\\\\\\\":0},{\\\\\\\"id\\\\\\\":12,\\\\\\\"name\\\\\\\":\\\\\\\"Central High School\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"123 Education Street, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.0522,\\\\\\\"longitude\\\\\\\":-118.2437,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:32:05\\\\\\\",\\\\\\\"distance\\\\\\\":0},{\\\\\\\"id\\\\\\\":13,\\\\\\\"name\\\\\\\":\\\\\\\"IIIIIIIIIIT High School\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"123 Education Street, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.0522,\\\\\\\"longitude\\\\\\\":-118.2437,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:32:15\\\\\\\",\\\\\\\"distance\\\\\\\":0},{\\\\\\\"id\\\\\\\":3,\\\\\\\"name\\\\\\\":\\\\\\\"Lincoln Elementary\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"456 Learning Avenue, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.055,\\\\\\\"longitude\\\\\\\":-118.25,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:09:04\\\\\\\",\\\\\\\"distance\\\\\\\":0.6586328906697838},{\\\\\\\"id\\\\\\\":4,\\\\\\\"name\\\\\\\":\\\\\\\"Lincoln Elementary\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"456 Learning Avenue, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.055,\\\\\\\"longitude\\\\\\\":-118.25,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:25:21\\\\\\\",\\\\\\\"distance\\\\\\\":0.6586328906697838},{\\\\\\\"id\\\\\\\":5,\\\\\\\"name\\\\\\\":\\\\\\\"Lincoln Elementary\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"456 Learning Avenue, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.055,\\\\\\\"longitude\\\\\\\":-118.25,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:25:33\\\\\\\",\\\\\\\"distance\\\\\\\":0.6586328906697838},{\\\\\\\"id\\\\\\\":6,\\\\\\\"name\\\\\\\":\\\\\\\"Lincoln Elementary\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"456 Learning Avenue, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.055,\\\\\\\"longitude\\\\\\\":-118.25,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:25:40\\\\\\\",\\\\\\\"distance\\\\\\\":0.6586328906697838},{\\\\\\\"id\\\\\\\":7,\\\\\\\"name\\\\\\\":\\\\\\\"Lincoln Elementary\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"456 Learning Avenue, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.055,\\\\\\\"longitude\\\\\\\":-118.25,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:26:36\\\\\\\",\\\\\\\"distance\\\\\\\":0.6586328906697838},{\\\\\\\"id\\\\\\\":8,\\\\\\\"name\\\\\\\":\\\\\\\"Lincoln Elementary\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"456 Learning Avenue, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.055,\\\\\\\"longitude\\\\\\\":-118.25,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:27:15\\\\\\\",\\\\\\\"distance\\\\\\\":0.6586328906697838},{\\\\\\\"id\\\\\\\":9,\\\\\\\"name\\\\\\\":\\\\\\\"dddd Elementary\\\\\\\",\\\\\\\"address\\\\\\\":\\\\\\\"555 Learning Avenue, City\\\\\\\",\\\\\\\"latitude\\\\\\\":34.055,\\\\\\\"longitude\\\\\\\":-118.25,\\\\\\\"created_at\\\\\\\":\\\\\\\"2025-05-22 07:27:25\\\\\\\",\\\\\\\"distance\\\\\\\":0.6586328906697838}]}\\\",\\\"responseTime\\\":4}}]}\",\"responseTime\":1}}]}",
+    "responseTime": 2
+  }
+},
