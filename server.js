@@ -1,60 +1,93 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const { connect } = require('./config/database');
-const { loggerMiddleware, getOperationLogs } = require('./middleware/logger');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow requests from any origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
-app.use(loggerMiddleware); // Add logger middleware
 
-// Import routes
-const schoolRoutes = require('./routes/schoolRoutes');
+// Ensure no authentication is required
+app.use((req, res, next) => {
+  // Skip authentication check
+  next();
+});
+
+// Determine which database to use
+let dbModule;
+if (process.env.VERCEL === '1') {
+  // Use JSON-based in-memory database for serverless
+  dbModule = require('./config/database-json');
+} else if (process.env.DB_TYPE === 'memory') {
+  // Use in-memory SQLite
+  dbModule = require('./config/database-serverless');
+} else {
+  // Use file-based SQLite
+  dbModule = require('./config/database');
+}
+
+const { connect } = dbModule;
+
+// Import routes with the appropriate database
+const schoolRoutes = require('./routes/schoolRoutes')(dbModule);
 
 // Apply routes with /api prefix
 app.use('/api', schoolRoutes);
 
-// Root route for basic server check
+// Root route
 app.get('/', (req, res) => {
-  res.send('School Management API Server is running. Use /api endpoints to access the API.');
+  res.send('School Management API is running. Use /api endpoints to access the API.');
 });
 
-// Root API route for API check
+// API info route
 app.get('/api', (req, res) => {
   res.json({
     message: 'School Management API is running',
+    environment: process.env.VERCEL === '1' ? 'serverless' : 'standard',
     endpoints: [
       { method: 'POST', path: '/api/addSchool', description: 'Add a new school' },
       { method: 'GET', path: '/api/listSchools', description: 'List schools by proximity' },
-      { method: 'GET', path: '/api/test', description: 'Test if API routes are working' },
-      { method: 'GET', path: '/api/logs', description: 'View operation logs' }
+      { method: 'GET', path: '/api/test', description: 'Test if API routes are working' }
     ]
   });
 });
 
-// Route to get operation logs
-app.get('/api/logs', (req, res) => {
-  const logs = getOperationLogs();
-  res.json({
-    total: logs.length,
-    logs
-  });
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'healthy', timestamp: new Date().toISOString() });
 });
 
-// Database connection and server initialization
-connect()
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-      console.log(`API is available at http://localhost:${PORT}/api`);
-      console.log(`Operation logs will be stored at ${process.env.LOG_FILE || './operations.log'}`);
+// Handle server initialization based on environment
+if (process.env.VERCEL === '1') {
+  // For Vercel, just connect to database
+  connect()
+    .then(() => {
+      console.log('Database connected for serverless environment');
+    })
+    .catch(err => {
+      console.error('Failed to connect to database in serverless:', err);
     });
-  })
-  .catch(err => {
-    console.error('Failed to connect to database:', err);
-    process.exit(1);
-  });
+  
+  // Export for serverless
+  module.exports = app;
+} else {
+  // For regular Node.js server
+  connect()
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+        console.log(`API is available at http://localhost:${PORT}/api`);
+        console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+      });
+    })
+    .catch(err => {
+      console.error('Failed to connect to database:', err);
+      process.exit(1);
+    });
+}

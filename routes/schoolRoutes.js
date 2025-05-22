@@ -1,55 +1,92 @@
 const express = require('express');
-const router = express.Router();
-const schoolController = require('../controllers/schoolController');
 const { validateAddSchool, validateListSchools } = require('../middleware/validation');
-const { getOperationLogs } = require('../middleware/logger');
+const { calculateDistance } = require('../utils/geoUtils');
 
-// Add logging middleware
-router.use((req, res, next) => {
-  console.log(`[API Request] ${new Date().toISOString()} - ${req.method} ${req.originalUrl}`);
-  next();
-});
+// Export a function that creates a router with the provided database module
+module.exports = function(dbModule) {
+  const router = express.Router();
+  const { query, insert } = dbModule;
 
-// Add School route
-router.post('/addSchool', validateAddSchool, schoolController.addSchool);
+  // Add School route
+  router.post('/addSchool', validateAddSchool, async (req, res) => {
+    try {
+      const { name, address, latitude, longitude } = req.body;
 
-// List Schools route
-router.get('/listSchools', validateListSchools, schoolController.listSchools);
+      const result = await insert(
+        'INSERT INTO schools (name, address, latitude, longitude) VALUES (?, ?, ?, ?)',
+        [name, address, latitude, longitude]
+      );
 
-// Test route to verify the router is working
-router.get('/test', (req, res) => {
-  res.status(200).json({ message: 'School routes are working' });
-});
-
-// Debug route to check database
-router.get('/debug/database', async (req, res) => {
-  try {
-    const { query } = require('../config/database');
-    const schools = await query('SELECT * FROM schools');
-    res.json({ 
-      message: 'Database query successful',
-      count: schools.length,
-      schools 
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// Get school-related operation logs
-router.get('/schoolLogs', (req, res) => {
-  const allLogs = getOperationLogs();
-  
-  // Filter logs related to school operations
-  const schoolLogs = allLogs.filter(log => {
-    return log.request.url.includes('/addSchool') || 
-           log.request.url.includes('/listSchools');
+      return res.status(201).json({
+        success: true,
+        message: 'School added successfully',
+        data: {
+          id: result.insertId,
+          name,
+          address,
+          latitude,
+          longitude
+        }
+      });
+    } catch (error) {
+      console.error('Error adding school:', error);
+      return res.status(500).json({
+        success: false,
+        message: 'Failed to add school',
+        error: error.message
+      });
+    }
   });
-  
-  res.json({
-    total: schoolLogs.length,
-    logs: schoolLogs
-  });
-});
 
-module.exports = router;
+  // List Schools route
+  router.get('/listSchools', validateListSchools, async (req, res) => {
+    try {
+      const { latitude, longitude } = req.query;
+      const userLat = parseFloat(latitude);
+      const userLng = parseFloat(longitude);
+
+      // Get all schools
+      const schools = await query('SELECT * FROM schools');
+      
+      if (!schools.length) {
+        return res.status(200).json({
+          success: true,
+          message: 'No schools found',
+          data: []
+        });
+      }
+
+      // Calculate distance for each school and add it as a property
+      const schoolsWithDistance = schools.map(school => {
+        const distance = calculateDistance(
+          userLat, userLng,
+          school.latitude, school.longitude
+        );
+        return { ...school, distance };
+      });
+
+      // Sort schools by distance (closest first)
+      schoolsWithDistance.sort((a, b) => a.distance - b.distance);
+
+      return res.status(200).json({
+        success: true,
+        message: 'Schools retrieved successfully',
+        data: schoolsWithDistance
+      });
+    } catch (error) {
+      console.error('Error listing schools:', error);
+      return res.status(500).json({
+        success: false,
+        message: 'Failed to retrieve schools',
+        error: error.message
+      });
+    }
+  });
+
+  // Test route
+  router.get('/test', (req, res) => {
+    res.status(200).json({ message: 'School routes are working' });
+  });
+
+  return router;
+};

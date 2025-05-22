@@ -9,11 +9,16 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "server.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+      }
     }
   ],
   "env": {
-    "DB_TYPE": "sqlite",
-    "LOG_OPERATIONS": "true"
-  }
+    "VERCEL": "1"
+  },
+  "public": true
 }

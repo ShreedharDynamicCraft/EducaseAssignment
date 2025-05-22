@@ -7,17 +7,18 @@ A Node.js API for managing school data with location-based sorting capabilities.
 - Add new schools with name, address, and geographical coordinates
 - List schools sorted by proximity to a user's location
 - Input validation for all API endpoints
-- SQLite database for data persistence
-- Operation logging for monitoring requests and responses
+- SQLite database for local development
+- In-memory data storage for serverless deployment
+- Comprehensive error handling
 
 ## Tech Stack
 
 - Node.js
 - Express.js
-- SQLite
+- SQLite (local development)
+- In-memory JSON storage (serverless)
 - Joi (for validation)
 - dotenv (for environment variables)
-- morgan (for logging)
 
 ## Installation and Setup
 
@@ -35,17 +36,14 @@ A Node.js API for managing school data with location-based sorting capabilities.
 3. Set up environment variables:
    Create a `.env` file in the root directory with the following variables:
    ```
-   PORT=3000
-   DB_TYPE=sqlite
+   PORT=5000
+   DB_TYPE=json        # Use 'json' for in-memory or 'sqlite' for file storage
    DB_FILE=./database.sqlite
-   LOG_OPERATIONS=true
-   LOG_FILE=./operations.log
+   LOG_OPERATIONS=false
+   VERCEL=0            # Set to 1 when deploying to Vercel
    ```
 
-4. Set up the database:
-   (The application will create the necessary tables on startup)
-
-5. Start the server:
+4. Start the server:
    ```
    npm start
    ```
@@ -141,10 +139,16 @@ A Node.js API for managing school data with location-based sorting capabilities.
   }
   ```
 
-### School Operation Logs
-- **URL**: `/api/schoolLogs`
+### Health Check
+- **URL**: `/api/health`
 - **Method**: GET
-- **Description**: Retrieves logs specific to school operations (adding and listing schools)
+- **Success Response**:
+  ```json
+  {
+    "status": "healthy", 
+    "timestamp": "2023-05-22T10:15:30.123Z"
+  }
+  ```
 
 ## Testing
 
@@ -153,37 +157,56 @@ A Postman collection is included in the `/postman` directory for testing the API
 ### Postman Testing Instructions
 
 1. Import the collection from `/postman/School_Management_API.postman_collection.json`
-2. Set up an environment with `baseUrl` variable set to `http://localhost:5000`
-3. Test the following endpoints:
-   - `GET {{baseUrl}}/api/test` - Verify API is working
-   - `POST {{baseUrl}}/api/addSchool` - Add a new school
-   - `GET {{baseUrl}}/api/listSchools?latitude=34.0522&longitude=-118.2437` - List schools by proximity
-   - `GET {{baseUrl}}/api/logs` - View all operation logs
-   - `GET {{baseUrl}}/api/schoolLogs` - View school-related operation logs
+2. Set up an environment with `baseUrl` variable set to:
+   - Local: `http://localhost:5000`
+   - Production: `https://educase-assignment-btqhz25dh-shreedhar-anands-projects.vercel.app`
+3. Test all endpoints as described in the collection documentation
 
 ## Deployment
 
-To deploy this application:
+### Local Deployment
 
-1. Set up a Node.js environment on your hosting service
-2. Configure the SQLite database location (or switch to a production database)
-3. Set the appropriate environment variables in `.env`:
+To run the API locally:
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Configure environment variables in `.env` file
+4. Run `npm start` to start the server
+5. Access the API at http://localhost:5000/api
+
+### Vercel Deployment
+
+The API is deployed on Vercel. Here's how to deploy your own instance:
+
+1. Install Vercel CLI:
    ```
-   PORT=5000
-   DB_TYPE=sqlite
-   DB_FILE=./database.sqlite
-   LOG_OPERATIONS=true
-   LOG_FILE=./operations.log
+   npm install -g vercel
    ```
-4. Build and start the application with `npm start`
+
+2. Login to Vercel:
+   ```
+   vercel login
+   ```
+
+3. Deploy to Vercel:
+   ```
+   vercel
+   ```
+
+4. Deploy to production:
+   ```
+   vercel --prod
+   ```
+
+Current production URL: [https://educase-assignment-btqhz25dh-shreedhar-anands-projects.vercel.app](https://educase-assignment-btqhz25dh-shreedhar-anands-projects.vercel.app)
 
 ## Technical Implementation Notes
 
-- **Database**: SQLite is used for data storage (originally planned with MySQL)
+- **Database**: SQLite for local development, in-memory data store for Vercel deployment
 - **Distance Calculation**: Haversine formula for accurate geographical distance measurement
-- **Logging**: Comprehensive request/response logging with timestamps and performance metrics
+- **Logging**: Request/response logging with timestamps and performance metrics
 - **Validation**: All API inputs are validated with Joi schema validation
 - **Error Handling**: Structured error responses with appropriate HTTP status codes
+- **Environment Detection**: Automatically detects and adapts to different environments (local vs serverless)
 
 ## License
 

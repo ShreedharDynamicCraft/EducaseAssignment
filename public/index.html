@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .endpoint {
+            background: #f5f5f5;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .method {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .get {
+            background: #61affe;
+            color: white;
+        }
+        .post {
+            background: #49cc90;
+            color: white;
+        }
+        code {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 4px;
+            display: block;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>School Management API</h1>
+    <p>Welcome to the School Management API. This API provides endpoints for managing school data with location-based sorting capabilities.</p>
+    
+    <h2>API Endpoints</h2>
+    
+    <div class="endpoint">
+        <span class="method post">POST</span>
+        <strong>/api/addSchool</strong>
+        <p>Add a new school with name, address, and geographical coordinates.</p>
+        <p><strong>Request Body:</strong></p>
+        <code>{
+  "name": "School Name",
+  "address": "School Address",
+  "latitude": 34.0522,
+  "longitude": -118.2437
+}</code>
+    </div>
+    
+    <div class="endpoint">
+        <span class="method get">GET</span>
+        <strong>/api/listSchools?latitude=34.0522&longitude=-118.2437</strong>
+        <p>List schools sorted by proximity to the provided coordinates.</p>
+    </div>
+    
+    <div class="endpoint">
+        <span class="method get">GET</span>
+        <strong>/api/test</strong>
+        <p>Test if the API is working properly.</p>
+    </div>
+    
+    <div class="endpoint">
+        <span class="method get">GET</span>
+        <strong>/api/health</strong>
+        <p>Check the health status of the API.</p>
+    </div>
+    
+    <h2>Try It Now</h2>
+    <p>You can test the API directly:</p>
+    <ul>
+        <li><a href="/api" target="_blank">API Information</a></li>
+        <li><a href="/api/test" target="_blank">Test API</a></li>
+        <li><a href="/api/listSchools?latitude=34.0522&longitude=-118.2437" target="_blank">List Schools</a></li>
+    </ul>
+    
+    <h2>Technical Details</h2>
+    <p>This API is built with Node.js and Express, using SQLite for local development and in-memory storage for serverless deployment.</p>
+    <p>The distance calculation uses the Haversine formula for accurate geographical distance measurement.</p>
+    
+    <footer>
+        <p>© 2023 School Management API</p>
+    </footer>
+</body>
+</html>
